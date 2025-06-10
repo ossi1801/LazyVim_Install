@@ -1,6 +1,6 @@
 # Good to know Vim commands
 
-### Replace All :
+### 1. Replace All :
 ##### Find each occurrence of 'foo' (in all lines), and replace it with 'bar'.
 ```
 :%s/foo/bar/g
@@ -12,7 +12,20 @@
 [source](https://stackoverflow.com/questions/19994922/find-and-replace-strings-in-vim-on-multiple-lines)
 ---
 
-### Search (normal mode):
+### 2. Apply an expression with "normal" keyword :
+##### Select an area with visual mode first, then press colon ( : )
+##### Below will show if done correctly 
+```
+'<,'>
+```
+##### Then in command mode type normal with expression after it
+```
+normal i print("
+```
+##### This will insert  print("  to the beginning of the lines of which you selected 
+
+---
+### 3. Search (normal mode):
 ##### Find each occurrence of 'foo' (in all lines)
 ```
 /foo
@@ -26,3 +39,19 @@ n
 N
 ```
 ---
+### 4. Recording macro and registers (:reg)
+##### Press q to record next key will the buffer where it will be place for ex a (qa)
+##### Below will show if done correctly 
+```
+recording @a
+```
+###### Note you can also check your register by typing :reg  You can quit the register buffer normally :q
+##### Then do your macro, when finished press q again.
+
+#### To repeat your macro press @a
+```
+@a
+```
+##### You can also press @@ for last macro
+##### or for ex. 5@@ to repeat the last used macro 5 times
+
