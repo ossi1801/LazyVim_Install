@@ -20,10 +20,15 @@
 ```
 ##### Then in command mode type normal with expression after it
 ```
-normal i print("
+normal Iprint("
 ```
 ##### This will insert  print("  to the beginning of the lines of which you selected 
 
+##### And if you reselect the rows you can use A to append to end
+```
+normal A");
+```
+##### This has now wrapped your selected rows in: printf("yourtexthere");
 ---
 ### 3. Search (normal mode):
 ##### Find each occurrence of 'foo' (in all lines)
