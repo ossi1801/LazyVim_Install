@@ -28,7 +28,7 @@ normal Iprint("
 ```
 normal A");
 ```
-##### This has now wrapped your selected rows in: printf("yourtexthere");
+##### This has now wrapped your selected rows in: print("yourtexthere");
 ---
 ### 3. Search (normal mode):
 ##### Find each occurrence of 'foo' (in all lines)
@@ -59,4 +59,26 @@ recording @a
 ```
 ##### You can also press @@ for last macro
 ##### or for ex. 5@@ to repeat the last used macro 5 times
-
+---
+### 5. Replace with an expression using "s" keyword using capture groups:
+##### Select an area with visual mode first, then press colon ( : )
+##### Below will show if done correctly 
+```
+'<,'>
+```
+##### Capture group (separated by whitespace) 
+```
+\(.*\)
+```
+##### Now that you know the syntax for a capture group, you can use it with:  \1
+```
+s/printf("\(.*\)".*/CustomPrint\(\1);
+```
+#### Replaces printf("Hello World"); with CustomPrint(Hello World);
+##### Forward slashes (/) usually means start and backslashes (\\) escape invalid chars in expression. In this case parantheses \( .
+##### The other .* (not capture group) just extends the selection to the end of line
+##### So in plaint text it reads: 
+```
+REPLACE ROW(S) printf("TEXT" until_end_of_this_line
+WITH CustomPrint(TEXT);
+```
