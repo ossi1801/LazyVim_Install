@@ -22,9 +22,17 @@ sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 ```
 #### 1.1 Then add this to your shell config (~/.bashrc, ~/.zshrc, ...):
+##### Edit from gui /home/ folder or use editor like nano or vi to edit .bashrc
 ```
+# Use either one or gui and add the export path to a new line in the end etc...
+nano ~/.bashrc
+vi ~/.bashrc
+```
+```
+# Neovim path
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 ```
+
 #### 1.2 Reload .bashrc:
 ```
 . ~/.bashrc
