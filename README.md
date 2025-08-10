@@ -78,4 +78,18 @@ sudo apt-get install -y dotnet-runtime-8.0
 ```
 sudo apt update && sudo apt install build-essential
 ```
+#### Font install (for terminal 'icons')
+
+##### Any nerdfont will do 
+[nerdfonts.com](https://www.nerdfonts.com/font-downloads)
+
+```
+curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FantasqueSansMono.zip
+unzip -q FantasqueSansMono.zip
+sudo cp -r FantasqueSansMono /usr/local/share/fonts/
+sudo fc-cache -fv
+```
+##### Remember to change your terminal font from 'preferences' or similiar by right clicking terminal
+
+
 
